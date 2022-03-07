@@ -32,6 +32,7 @@ public class Sketch extends PApplet {
    */
   public void draw() {
     
+    //variable declaration
     float floatFlowerX;
     float floatFlowerY;
     float floatDistance;
@@ -51,13 +52,13 @@ public class Sketch extends PApplet {
     floatSize = width / 4;
     floatDistance = floatSize / 2;
 
-    //if the flower falls in the top left corner the background turns white
-    if (floatFlowerX < width / 2 && floatFlowerY < height / 2) {
+    //if the flower falls in the bottom right corner the background turns white
+    if (floatFlowerX > width / 2 && floatFlowerY > height / 2) {
       background(255, 255, 255);
     }
 
-    //if the flower falls in the right side of the screen or the bottom half background turns blue
-    if (floatFlowerX > width / 2 || floatFlowerY > height / 2) {
+    //if the flower falls in the left side of the screen or the top half background turns blue
+    if (floatFlowerX < width / 2 || floatFlowerY < height / 2) {
       background(0, 0, 255);
     }
     
